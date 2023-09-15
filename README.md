@@ -1,3 +1,4 @@
+[![black-action](https://github.com/Choc-Labs/Radio-Telescope/actions/workflows/Black.yml/badge.svg)](https://github.com/Choc-Labs/Radio-Telescope/actions/workflows/Black.yml)
 # Mini Radio Telescope
 ![MRT](https://hackaday.com/wp-content/uploads/2019/10/mrt_closeup.jpg)
 A computerized telescope created using a satellite TV dish and hobbyist electronic components.<br/>
@@ -26,9 +27,3 @@ This GitHub contains Arduino and Python code for the telescope.
 ![](https://hackaday.com/wp-content/uploads/2019/10/mrt_sats.png)
 ![](https://github.com/UPennEoR/MiniRadioTelescope/blob/master/Documentation/MakerFaireMap.png)
 ![](https://github.com/UPennEoR/MiniRadioTelescope/blob/master/Documentation/SDRScan.jpg)
-
-As of 5 April 2020, the working Arduino sketch is: MRTArduino (previously known as MRTv2)<br/>
-The python code for the Pi is MRT_PY4.py
-
-
-Hackaday was kind enough to do a write-up about this project: https://hackaday.com/2019/10/22/a-miniature-radio-telescope-in-every-backyard/
