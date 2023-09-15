@@ -28,12 +28,11 @@ A port of Tod E. Kurt's arduino-serial.c.
 """
 from __future__ import print_function
 
-import termios
+import getopt
 import os
 import sys
+import termios
 import time
-import getopt
-
 
 # Map from the numbers to the termios constants (which are pretty much
 # the same numbers).
@@ -46,7 +45,6 @@ BPS_SYMS = {
     57600: termios.B57600,
     115200: termios.B115200
 }
-
 
 # Indices into the termios tuple.
 
@@ -65,6 +63,7 @@ def bps_to_termios_sym(bps):
 
 class SerialPort(object):
     """Represents a serial port connected to an Arduino."""
+
     def __init__(self, serialport, bps):
         """Takes the string name of the serial port (e.g.
         "/dev/tty.usbserial","COM1") and a baud rate (bps) and connects to

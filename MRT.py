@@ -1,27 +1,20 @@
 import os
 import sys
+import time
+
+# import healpy as hp
+import matplotlib.pyplot as plt
+import numpy as np
+import serial
+from scipy.interpolate import griddata
 
 # import tkinter as tk
 # from tkinter import ttk, scrolledtext
-
-from matplotlib import pyplot as plt
-from matplotlib import style
-
 # from matplotlib.backends._backend_tk import NavigationToolbar2Tk
 # from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 # from matplotlib.ticker import MaxNLocator
 
-import serial
-import numpy as np
-
-# import healpy as hp
-import astropy as ap
-import matplotlib.pyplot as plt
-import time
-from scipy.interpolate import griddata
-
 debug = True
-
 
 """
 Telescope Movement Commands

@@ -1,9 +1,11 @@
 # verified 12 July 2018: working
 
-import numpy as np
 import time
-import mrtstate
+
+import numpy as np
+
 import MRT_FUNC_PY3 as mrtf
+import mrtstate
 
 # %
 # ----------------------------------------------------------------------------
@@ -51,7 +53,6 @@ ser.write(mrtf.REPORT_STATE)
 mrtstate.state = mrtf.readState(ser)
 
 mrtf.PrintState()
-
 
 # %%
 

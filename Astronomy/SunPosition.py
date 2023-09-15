@@ -1,14 +1,12 @@
-import numpy as np
-
 # import matplotlib.pyplot as plt
 # from astropy import units as u
 # from astropy import constants as c
-from astropy.time import Time
-from astropy.coordinates import EarthLocation, get_sun, AltAz
-
 # solar_system_ephemeris, EarthLocation
 # from astropy.coordinates import get_body_barycentric, get_body, get_moon, get_sun, SkyCoord, AltAz
 import time
+
+from astropy.coordinates import EarthLocation, get_sun, AltAz
+from astropy.time import Time
 
 Witley = EarthLocation(lat="51.137570", lon="-0.646884")
 current_time = Time(time.time(), format="unix")

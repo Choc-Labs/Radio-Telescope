@@ -1,25 +1,16 @@
-import os
-import sys
 import tkinter as tk
 from tkinter import ttk, scrolledtext
 
-from matplotlib import pyplot as plt, animation
+# import healpy as hp
+import matplotlib.pyplot as plt
+import mrtstate
+import numpy as np
+from GUI import MRT_FUNC_PY4_GUI as mrtf
+from GUI.MRT_FUNC_PY4_GUI import portList
 from matplotlib import style
 from matplotlib.backends._backend_tk import NavigationToolbar2Tk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.ticker import MaxNLocator
-
-import serial
-import numpy as np
-# import healpy as hp
-import astropy as ap
-import matplotlib.pyplot as plt
-import time
-from GUI import MRT_FUNC_PY4_GUI as mrtf
-import mrtstate
-from scipy.interpolate import griddata
-
-from GUI.MRT_FUNC_PY4_GUI import portList
 
 debug = True
 
@@ -73,6 +64,7 @@ ser.write(mrtf.REPORT_STATE)
 mrtstate.state = mrtf.readState(ser)
 
 mrtf.PrintState()
+
 
 def cmdConnect(port):
     mrtf.connectToArduino(port)

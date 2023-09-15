@@ -5,16 +5,16 @@ Created on Tue Jun 26 12:35:20 2018
 
 @author: oscartinney
 """
-import serial
-import numpy as np
+import time
 
 # import healpy as hp
-import astropy as ap
 import matplotlib.pyplot as plt
-import time
+import numpy as np
+import serial
+from scipy.interpolate import griddata
+
 import MRTtools as mrt
 import mrtstate
-from scipy.interpolate import griddata
 
 # %%
 # Don't yet have a good way of auto-detecting which port is Arduino

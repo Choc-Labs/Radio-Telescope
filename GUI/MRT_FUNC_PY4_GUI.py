@@ -7,16 +7,13 @@ Created on Tue Jun 26 12:35:20 2018
 """
 import os
 import sys
-
-import serial
-import numpy as np
-
-# import healpy as hp
-import astropy as ap
-import matplotlib.pyplot as plt
 import time
+
 import MRTtools as mrt
+# import healpy as hp
+import matplotlib.pyplot as plt
 import mrtstate
+import numpy as np
 from scipy.interpolate import griddata
 
 # %%

@@ -1,9 +1,8 @@
-import numpy as np
-from astropy import units as u
-from astropy import constants as c
-from glob import glob
 import os
+from glob import glob
 from os import path
+
+from astropy import units as u
 
 large_data_path = "./Data/"
 

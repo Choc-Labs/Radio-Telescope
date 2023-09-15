@@ -5,17 +5,17 @@ Created on Tue Jun 26 12:35:20 2018
 
 @author: oscartinney
 """
-import serial
-import numpy as np
+import time
 
 # import healpy as hp
-import astropy as ap
 import matplotlib.pyplot as plt
-import time
+import numpy as np
+import serial
+from influxdb import InfluxDBClient
+from scipy.interpolate import griddata
+
 import MRTtools as mrt
 import mrtstate
-from scipy.interpolate import griddata
-from influxdb import InfluxDBClient
 
 client = InfluxDBClient("localhost", 8086, "root", "root", "test")
 
@@ -63,7 +63,6 @@ EIGHTH = b"e"
 QUARTER = b"q"
 HALF = b"h"
 FULL = b"f"
-
 
 ##<<<<<<< HEAD
 # =======

@@ -5,13 +5,13 @@ to add the shift register code.
 
 """
 
+# import healpy as hp
+import time
+
 import numpy as np
 
-# import healpy as hp
-import astropy as ap
-import time
-import mrtstate
 import MRT_FUNC_PY4 as mrtf
+import mrtstate
 
 # %
 # ----------------------------------------------------------------------------
@@ -59,7 +59,6 @@ ser.write(mrtf.REPORT_STATE)
 mrtstate.state = mrtf.readState(ser)
 
 mrtf.PrintState()
-
 
 # %%
 

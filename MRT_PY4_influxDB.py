@@ -1,12 +1,12 @@
 # verified 12 July 2018: working
 
+# import healpy as hp
+import time
+
 import numpy as np
 
-# import healpy as hp
-import astropy as ap
-import time
-import mrtstate
 import MRT_FUNC_PY4_influxDB as mrtf
+import mrtstate
 
 # %
 # ----------------------------------------------------------------------------
@@ -55,7 +55,6 @@ mrtstate.state = mrtf.readState(ser)
 
 mrtf.PrintState()
 
-
 # %%
 
 """ Basic mode of operation should be that the Python side handles the user 
@@ -79,7 +78,7 @@ while operate:
             mrtf.PrintState()
         elif var == "MS":  # Make a map of the South Sky
             cs = mrtf.StdCmd(ser, mrtf.REPORT_STATE)
-            # az,el,pwr,mp,azi,eli = mrtf.ScanSouthSky(cs)
+            # az, el, pwr, mp, azi, eli = mrtf.ScanSouthSky(cs)
             # Update the current state
             current_state = mrtstate.state
             mrtf.ScanSouthSky()

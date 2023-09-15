@@ -16,11 +16,12 @@
     current shape of it.
 """
 
+import logging
 import sys
+from multiprocessing import Process, Event
+
 import h5py
 import numpy as np
-import logging
-from multiprocessing import Process, Event
 
 
 class SwmrReader(Process):
@@ -84,7 +85,7 @@ class SwmrWriter(Process):
                 self.log.info("Resizing dset shape: %s" % str(new_shape))
                 dset.resize(new_shape)
                 self.log.debug("Writing data")
-                dset[i * len(arr) :] = arr
+                dset[i * len(arr):] = arr
                 # dset.write_direct( arr, np.s_[:], np.s_[i*len(arr):] )
                 self.log.debug("Flushing data")
                 dset.flush()

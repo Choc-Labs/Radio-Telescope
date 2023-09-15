@@ -31,13 +31,13 @@ state_vars = [
 ]
 
 state_dtypes = [
-    "<U16",  #'string',
+    "<U16",  # 'string',
     "float64",
     "int64",
     "float64",
     "int64",
-    "<U16",  #'string',,
-    "<U16",  #'string',
+    "<U16",  # 'string',,
+    "<U16",  # 'string',
     "int64",
     "int",
     "int",

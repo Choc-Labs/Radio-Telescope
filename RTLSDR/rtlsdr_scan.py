@@ -6,10 +6,11 @@ Created on Wed Jul 26 21:55:36 2017
 @author: jaguirre
 """
 
-import matplotlib.pyplot as plt
-import rtlsdr
-import numpy as np
 import time
+
+import matplotlib.pyplot as plt
+import numpy as np
+import rtlsdr
 
 f_min = 750e6
 f_max = 1700e6
@@ -48,10 +49,10 @@ for freq in freqs:
     p, f = plt.psd(samples, NFFT=1024, Fs=bw_mhz, Fc=fc_mhz)
     # Notch out zero freq plus some other spurious spike ("off")
     wh0 = np.abs(f - fc_mhz).argmin()
-    flags[wh0 - 1 : wh0 + 2] = 0
+    flags[wh0 - 1: wh0 + 2] = 0
     # p[wh0] = np.median([p[wh0-1],p[wh0+1]])
     wh3 = np.abs(f - (fc_mhz + off)).argmin()
-    flags[wh3 - 2 : wh3 + 3] = 0
+    flags[wh3 - 2: wh3 + 3] = 0
     # p[wh3] = np.median([p[wh3-1],p[wh3+1]])
     psd_all[indx] = p
     f_all[indx] = f
